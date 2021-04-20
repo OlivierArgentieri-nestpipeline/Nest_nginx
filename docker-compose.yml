@@ -9,6 +9,8 @@ services:
       - 80:80
       - 443:443
     volumes:
-      - /home/debian/nginx/config:/etc/nginx
-      - /home/debian/nginx/certs:/etc/ssl/private
-      
+      - type: bind
+        source: /root/Nest_nginx/nginx/config
+        target: /etc/nginx
+        source: /root/Nest_nginx/nginx/certs
+        target: /etc/ssl/private
