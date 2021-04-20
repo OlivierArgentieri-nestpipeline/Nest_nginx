@@ -9,8 +9,5 @@ services:
       - 80:80
       - 443:443
     volumes:
-      - type: bind
-        source: /root/Nest_nginx/nginx/config
-        target: /etc/nginx
-        source: /root/Nest_nginx/nginx/certs
-        target: /etc/ssl/private
+      - /root/Nest_nginx/config:/etc/nginx
+      
