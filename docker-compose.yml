@@ -1,0 +1,14 @@
+version:  "3"
+
+services:
+  reverse:
+    container_name: reverse
+    hostname: reverse
+    iùage: nginx
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - /root/Nest_nginx/config:/etc/nginx
+      - /root/Nest_nginx/config:/etc/ssl/private
+      
