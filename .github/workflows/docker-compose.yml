@@ -1,0 +1,14 @@
+name: DockerCompose
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Docker Compose
+        run: docker-compose up
